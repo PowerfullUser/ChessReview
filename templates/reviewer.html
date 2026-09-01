@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin">
+    <title>ChessReview</title>
+    <script type="importmap">
+        {
+            "imports": {
+                "chess.js": "https://cdn.jsdelivr.net/npm/chess.js@1.4.0/+esm"
+            }
+        }
+    </script>
+</head>
+<link rel="stylesheet" href="/static/reviewer.css">
+<script type="module" src="/static/reviewer.js"></script>
+<body>
+    <div class="nav-bar">
+        <div class="title">
+            <h1>ChessReview</h1>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="content">
+        <div class="board-element">
+            <div class="black">
+                <div class="black-username"></div>
+                <div class="spacer"></div>
+                <div class="black-rating"></div>
+            </div>
+
+            <div class="board"></div>
+
+            <div class="white">
+                <div class="white-username"></div>
+                <div class="spacer"></div>
+                <div class="white-rating"></div>
+            </div>
+        </div>
+
+        <div class="summary">
+            <div class="chatbot">
+                <div class="img">
+                    <img src="/static/Images/SuperChess.png" class="coach-image">
+                </div>
+                <div class="text">
+                    <p>Welcome to Game Review, here we will analyze your game on a scale of 0-100.</p>
+                </div>
+            </div>
+
+            <div class="accuracy-indicator">
+                <div class="spacer"></div>
+
+                <div class="white-accuracy">
+                    <p id="white-accuracy">0</p>
+                </div>
+
+                <div class="black-accuracy">
+                    <p id="black-accuracy">0</p>
+                </div>
+
+                <div class="spacer"></div>
+            </div>
+            
+            <div class="summary-box">
+                <div class="spacer"></div>
+
+                <div class="summary-labels">
+                    <p class="great-label">Great</p>
+                    <p class="excellent-label">Excellent</p>
+                    <p class="good-label">Good</p>
+                    <p class="inaccurate-label">Inaccurate</p>
+                    <p class="mistake-label">Mistake</p>
+                    <p class="blunder-label">Blunder</p>
+                </div>
+
+                <div class="summary-white">
+                    <p id="great-white">0</p>
+                    <p id="excellent-white">0</p>
+                    <p id="good-white">0</p>
+                    <p id="inaccurate-white">0</p>
+                    <p id="mistake-white">0</p>
+                    <p id="blunder-white">0</p>
+                </div>
+
+                <div class="summary-black">
+                    <p id="great-black">0</p>
+                    <p id="excellent-black">0</p>
+                    <p id="good-black">0</p>
+                    <p id="inaccurate-black">0</p>
+                    <p id="mistake-black">0</p>
+                    <p id="blunder-black">0</p>
+                </div>
+
+                <div class="spacer"></div>
+            </div>
+        </div>
+
+        <div class="move-nav">
+            <div class="move-panel">
+                <div class="spacer"></div>
+                <div class="white-moves"></div>
+                <div class="black-moves"></div>
+                <div class="spacer"></div>
+            </div>
+
+            <div class="toolbar">
+                <btn class="button" id="start">Start</btn>
+                <btn class="button" id="back">Back</btn>
+                <btn class="button" id="forward">Forward</btn>
+                <btn class="button" id="end">End</btn>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
