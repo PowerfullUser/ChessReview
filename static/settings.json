@@ -1,0 +1,12 @@
+{
+    "user" : {
+        "name" : "ct2069",
+        "platform" : "chess.com",
+        "email" : "toshan.chowdhury@gmail.com"
+    },
+
+    "custom" : {
+        "board-color" : "default",
+        "board-pieces" : "default" 
+    }
+}
